@@ -2,8 +2,8 @@ module Targetdata
   module Entities
     class Company
       attr_reader :cnpj,
-                  :social_reason,
                   :name,
+                  :fantasy_name,
                   :opening_date,
                   :parent_company,
                   :cadastral_status,
@@ -14,8 +14,8 @@ module Targetdata
 
       def initialize(hash)
         @cnpj                    = hash.fetch(:CNPJ)
-        @social_reason           = hash.fetch(:razaoSocial)
-        @name                    = hash.fetch(:nomeFantasia)
+        @name                    = hash.fetch(:razaoSocial)
+        @fantasy_name            = hash.fetch(:nomeFantasia)
         @opening_date            = hash.fetch(:dataAbertura)
         @parent_company          = hash.fetch(:matriz)
         @cadastral_status        = hash.fetch(:situacaoCadastral)
@@ -28,8 +28,8 @@ module Targetdata
       def to_json(*args)
         {
           cnpj: @cnpj,
-          social_reason: @social_reason,
           name: @name,
+          fantasy_name: @fantasy_name,
           opening_date: @opening_date,
           parent_company: @parent_company,
           cadastral_status: @cadastral_status,
