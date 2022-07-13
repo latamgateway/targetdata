@@ -17,3 +17,5 @@
 .rspec_status
 .env*.local
 *.gem
+
+*/**/__snapshots__
