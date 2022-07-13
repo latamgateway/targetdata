@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=2&client_secret=123456&username=my_user&password=my_password&empresa=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.targetdata-smart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jul 2022 15:09:48 GMT
+      Server:
+      - Apache/2.4.37 (centos) OpenSSL/1.1.1k PHP/7.2.34
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      X-Powered-By:
+      - PHP/7.2.34
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19998'
+      Content-Length:
+      - '1870'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":315619200,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdlYjIwMTUyNzcyOWEwYjYyMjJhNjBjODQ3OGQwNGU5MmE5NTM5NThjM2Q3ODY3Y2I0N2I1MmJlN2YxYWM5NGI0MDNmNmQwMDA3YTYxNzMwIn0.eyJhdWQiOiIyIiwianRpIjoiN2ViMjAxNTI3NzI5YTBiNjIyMmE2MGM4NDc4ZDA0ZTkyYTk1Mzk1OGMzZDc4NjdjYjQ3YjUyYmU3ZjFhYzk0YjQwM2Y2ZDAwMDdhNjE3MzAiLCJpYXQiOjE2NTc2Mzg1OTksIm5iZiI6MTY1NzYzODU5OSwiZXhwIjoxOTczMjU3Nzk5LCJzdWIiOiI2MzU2Iiwic2NvcGVzIjpbXX0.kbNRFviyUY3rBMtA93iolU5vfGsWcVV-qtNO9j0ZBu-RwLY4a4_hRbuluHen6yCWH9pdczY-pRXWoQN0ydTaD7RxDZOl6MfT7ARBVwtIkZNrzRguhFCpQYynjt5Rjr-Pz3nF1xM16Lg-RbhhIcFf0fZR2IUXAjy7L89j0wmvG34uQO_WMZL7Pd1nyjbPmcBK3Lwc66pzYVhEgjzGDig3uD-J43qAXdzU9rjNKk59c9v1kqUO7nZJR_Afdj9QbCWJYuK3vu71xbfyvOyRax5qtlbYxt-G_I87YN6LW2_WyiHRPPpLz4zs0fG8us7vFDOM0b0l73N1ucioO5ewGz_cfuO2DLnsPWM-21uVcngySzwuIl9lliXDjskyaa9tt--sWF3DwTFqGYdguVEI8lzAkA5x_FgdWxI_ZBQ0KOZq3dgUOvKJ48PleoQL7dKbIrRIhGccCZ0LUv1AAxo41ROm67FK8p3UYZlfcfNGp2kshcZEjGZxJINigWVHZ7daK-eNHeyzuJ-rR5gpo_wo3Pq9uLbSd5fxZvJsnpAMk7cB8P0oF7jrCOJiiFpLcZ1UZPwWGBnmkd7wETg6HcpQu1sIlOXALT7vNziEK3ssjy3EctVf-8b6iCgnGrIdHucvcx-lqcKLon7mVTvufNU7NiW7PFEE4LG1frKQeDgUsPLa-Ag","refresh_token":"def50200cf10af68a959ad4e524418f6522546e4adad97f303c5ed362c1bbdd67084cc5db0a9cfd8395605b2636b5d4f020f4208dc757974c44b403b75047a6eb87837d4be78a6bb38be535a16d0b54f624d1598fb81198968554040a7bad4798ae68dbc6125d7d6dc2df4dea385042adeabf44bac8784a7b9ceb109b27ea2194c933cf505213e16cf89ad665e3a56d2b2c0af775925bea0d02bc76089c6a67572faad00d0a4c9f2a788a32a5296b757efca59287c5d374e03d34aa253284892bf7b2f1d1c597c859f36b10e162407ecb2b7d000bddb93c87d441fa83705dba1bcc4fe905ed35d297c48c44b6bd64791524348bf34151b1620c90d61a9d7ff333e183c8517890ca2a4e005be867d0204a164a7f7c081e5fa731cb4128d4ae7e73af3f894ac7d0969b96b26aca5766b9288a01597b1e0b30b52f39ca00d57df5ed6c7e12acc44136cb94cd2305eccb4c7982805d120eb1cf190981e9eb0dbc95b5770d7ce"}'
+  recorded_at: Tue, 12 Jul 2022 15:09:59 GMT
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/PJ/CNPJ
+    body:
+      encoding: UTF-8
+      string: '["00000000000000"]'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdlYjIwMTUyNzcyOWEwYjYyMjJhNjBjODQ3OGQwNGU5MmE5NTM5NThjM2Q3ODY3Y2I0N2I1MmJlN2YxYWM5NGI0MDNmNmQwMDA3YTYxNzMwIn0.eyJhdWQiOiIyIiwianRpIjoiN2ViMjAxNTI3NzI5YTBiNjIyMmE2MGM4NDc4ZDA0ZTkyYTk1Mzk1OGMzZDc4NjdjYjQ3YjUyYmU3ZjFhYzk0YjQwM2Y2ZDAwMDdhNjE3MzAiLCJpYXQiOjE2NTc2Mzg1OTksIm5iZiI6MTY1NzYzODU5OSwiZXhwIjoxOTczMjU3Nzk5LCJzdWIiOiI2MzU2Iiwic2NvcGVzIjpbXX0.kbNRFviyUY3rBMtA93iolU5vfGsWcVV-qtNO9j0ZBu-RwLY4a4_hRbuluHen6yCWH9pdczY-pRXWoQN0ydTaD7RxDZOl6MfT7ARBVwtIkZNrzRguhFCpQYynjt5Rjr-Pz3nF1xM16Lg-RbhhIcFf0fZR2IUXAjy7L89j0wmvG34uQO_WMZL7Pd1nyjbPmcBK3Lwc66pzYVhEgjzGDig3uD-J43qAXdzU9rjNKk59c9v1kqUO7nZJR_Afdj9QbCWJYuK3vu71xbfyvOyRax5qtlbYxt-G_I87YN6LW2_WyiHRPPpLz4zs0fG8us7vFDOM0b0l73N1ucioO5ewGz_cfuO2DLnsPWM-21uVcngySzwuIl9lliXDjskyaa9tt--sWF3DwTFqGYdguVEI8lzAkA5x_FgdWxI_ZBQ0KOZq3dgUOvKJ48PleoQL7dKbIrRIhGccCZ0LUv1AAxo41ROm67FK8p3UYZlfcfNGp2kshcZEjGZxJINigWVHZ7daK-eNHeyzuJ-rR5gpo_wo3Pq9uLbSd5fxZvJsnpAMk7cB8P0oF7jrCOJiiFpLcZ1UZPwWGBnmkd7wETg6HcpQu1sIlOXALT7vNziEK3ssjy3EctVf-8b6iCgnGrIdHucvcx-lqcKLon7mVTvufNU7NiW7PFEE4LG1frKQeDgUsPLa-Ag
+      Connection:
+      - close
+      Host:
+      - api.targetdata-smart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jul 2022 15:10:00 GMT
+      Server:
+      - Apache/2.4.37 (centos) OpenSSL/1.1.1k PHP/7.2.34
+      Vary:
+      - Authorization
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      X-Powered-By:
+      - PHP/7.2.34
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19997'
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"header":{"api_version":"3.0.0","type_connection":1,"user":"","request_time":"2022-07-12
+        12:10:00","elapsed_return_time_milliseconds":19.39,"access_ip":null,"error":"Nenhum
+        resultado encontrado para a chave pesquisada.","amount_sent":1},"report":{"totalEnviado":1,"totalRetornado":0,"razaoSocial":0,"nomeFantasia":0,"dataAbertura":0,"matriz":0,"naturezaJuridica":0,"situacaoCadastral":0,"dataSituacaoCadastral":0,"situacaoEspecial":0,"simples":0,"faixaFaturamento":0,"faixaFuncionario":0,"porte":0,"cnae":0,"inscricaoEstadual":0,"quandroSocietario":0,"email":0,"telefone":0,"endereco":0,"imovel":0},"result":[]}'
+  recorded_at: Tue, 12 Jul 2022 15:10:00 GMT
+recorded_with: VCR 6.1.0
