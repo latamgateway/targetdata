@@ -54,6 +54,20 @@ person.mother_first_name
 person.mother_middle_name
 person.mother_last_name
 person.schooling
+
+# Find by CNPJ
+cnpj = '33630661000150'
+company = Targetdata::Api::CNPJ.new(cnpj).company
+
+# Company's attributes
+company.cadastral_status
+company.cadastral_status_date
+company.cadastral_status_reason
+company.cnpj
+company.fantasy_name
+company.name
+company.opening_date
+company.parent_company
 ```
 
 ## Development
@@ -61,6 +75,17 @@ person.schooling
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+Create file `.env.local` with the data above for execute rspec:
+
+```
+TARGET_USERNAME= 'my_user'
+TARGET_PASSWORD= 'my_password'
+TARGET_COMPANY_ID= '1'
+TARGET_CLIENT_SECRET= '123456'
+TEST_CPF=35318965040
+TEST_CNPJ=33630661000150
+```
 
 ## Contributing
 

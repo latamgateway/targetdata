@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=2&client_secret=123456&username=my_user&password=my_password&empresa=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.targetdata-smart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jul 2022 15:11:28 GMT
+      Server:
+      - Apache/2.4.37 (centos) OpenSSL/1.1.1k PHP/7.2.34
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      X-Powered-By:
+      - PHP/7.2.34
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19999'
+      Content-Length:
+      - '1870'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":315619200,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUxYzc4YzIzMGViNTBhMzg0ZDgzMjMyNDBiOWU1NjVhNjVmYTM3NDc3YjJlMDhlYmMwZTE2NDQwNDNmM2U4OTU0OWJkOTY0MGZlZjI4NDVjIn0.eyJhdWQiOiIyIiwianRpIjoiNTFjNzhjMjMwZWI1MGEzODRkODMyMzI0MGI5ZTU2NWE2NWZhMzc0NzdiMmUwOGViYzBlMTY0NDA0M2YzZTg5NTQ5YmQ5NjQwZmVmMjg0NWMiLCJpYXQiOjE2NTc2Mzg3MDAsIm5iZiI6MTY1NzYzODcwMCwiZXhwIjoxOTczMjU3OTAwLCJzdWIiOiI2MzU2Iiwic2NvcGVzIjpbXX0.n3qegvSPTIRPRHfB4CwrnIrNPiyaPuAzE5KtktDeDw4_lNwhwzRCX1IVgeb2HdgA5lwE3E2HdLWJ8EHb0luLrwSFj65LbZtJbUrkdQQc2yNgqh8mxO3qTjAhilPkjyUzZh3GilkSLhzJ3zQKSvJfgPRTEqwvYl9CQFM-L1Wt0DfVUwPXx6h83leIiDNH2HUXgHHHEr9TS_T10ouxuZcSJ7M_wgKM5zUBOjAoNcH-NoxE4mLGAQ7-59jpkk1oUg0FzVVIdD7pcTGAvQIEs-0D1fiBjhWxaL_JY9kLKAJgzkwikJOkIzhjDBrvBUbkzBRknRdwcXtlK7usbU6iZhq-71NU3Ktm_kRTQQSDy7n-wQRmlv5d-xyypOAtMg0FkO5HP0YL6CxC2MrD9Z-NsDzVF_7wqtZQxBrn3n2y41QR__v3G7XbvwNjj5w1CETXNWVLsl_fmKOS6oBKTCfbj-9MA_B3AZcymXQAL8YrjClPZh13hNSxtBGULMOqCtVxUnjOybt2bGpM_XPi5Rct08J0LcYOBPwt4N2d_60PfH9osbOCcoXM1RR-mO73zZ12sUHYC_DWlx5qw-V_sd08sTNAVnqHiRBlff2oZEHyBNOJ6uvlRboebbiPCr5-1lpfBpCNhm8wbhRmFrm139ak-7SMQQ3P2whYlsJaYvCFmEd23Fo","refresh_token":"def50200ca31bac561c557cb965cd16afb5782cb6bb16e0ef013c0721690ef5817ad4a49f820996c5e042ed5940aba3290cde41668abe7b202123036d2efec44a102d8a89971568ac8f0a84e38f359986878f52cc0e8688a5b5a1479a28b8b81e1078564373ed3e4f6884dbdc60ce111332626c4c6767ee80ef25729748761959c03913ac1dc949c8016da72e82e3a67ca7524ddd44777c5234c908903596d0a866e23bbe5aacbda14e3bda60a21c910ca6a86d736948bd0f79fa8672b13f89ff3e77745bbfff15d8a35a324a0bc961e8d546a5f804d6d1d301d96eb22a695091964cec395d9206991a576a4bc12b75583e3dae444438bf7db59e2986933a6850d4c1cd353bb4b8fa59c87c8452f98b207f892de58a0b09079b7a796958f669419d8e6dac33e7fe487d49a42b53dc69ea90e6fed4811fe8baadf2e64b4e80a43357d10eb1c5042335f45c8a0a919ff98a617c2126e6833c3382909f6c697cd89afbcc697"}'
+  recorded_at: Tue, 12 Jul 2022 15:11:40 GMT
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/PJ/CNPJ
+    body:
+      encoding: UTF-8
+      string: '["33630661000150"]'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUxYzc4YzIzMGViNTBhMzg0ZDgzMjMyNDBiOWU1NjVhNjVmYTM3NDc3YjJlMDhlYmMwZTE2NDQwNDNmM2U4OTU0OWJkOTY0MGZlZjI4NDVjIn0.eyJhdWQiOiIyIiwianRpIjoiNTFjNzhjMjMwZWI1MGEzODRkODMyMzI0MGI5ZTU2NWE2NWZhMzc0NzdiMmUwOGViYzBlMTY0NDA0M2YzZTg5NTQ5YmQ5NjQwZmVmMjg0NWMiLCJpYXQiOjE2NTc2Mzg3MDAsIm5iZiI6MTY1NzYzODcwMCwiZXhwIjoxOTczMjU3OTAwLCJzdWIiOiI2MzU2Iiwic2NvcGVzIjpbXX0.n3qegvSPTIRPRHfB4CwrnIrNPiyaPuAzE5KtktDeDw4_lNwhwzRCX1IVgeb2HdgA5lwE3E2HdLWJ8EHb0luLrwSFj65LbZtJbUrkdQQc2yNgqh8mxO3qTjAhilPkjyUzZh3GilkSLhzJ3zQKSvJfgPRTEqwvYl9CQFM-L1Wt0DfVUwPXx6h83leIiDNH2HUXgHHHEr9TS_T10ouxuZcSJ7M_wgKM5zUBOjAoNcH-NoxE4mLGAQ7-59jpkk1oUg0FzVVIdD7pcTGAvQIEs-0D1fiBjhWxaL_JY9kLKAJgzkwikJOkIzhjDBrvBUbkzBRknRdwcXtlK7usbU6iZhq-71NU3Ktm_kRTQQSDy7n-wQRmlv5d-xyypOAtMg0FkO5HP0YL6CxC2MrD9Z-NsDzVF_7wqtZQxBrn3n2y41QR__v3G7XbvwNjj5w1CETXNWVLsl_fmKOS6oBKTCfbj-9MA_B3AZcymXQAL8YrjClPZh13hNSxtBGULMOqCtVxUnjOybt2bGpM_XPi5Rct08J0LcYOBPwt4N2d_60PfH9osbOCcoXM1RR-mO73zZ12sUHYC_DWlx5qw-V_sd08sTNAVnqHiRBlff2oZEHyBNOJ6uvlRboebbiPCr5-1lpfBpCNhm8wbhRmFrm139ak-7SMQQ3P2whYlsJaYvCFmEd23Fo
+      Connection:
+      - close
+      Host:
+      - api.targetdata-smart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jul 2022 15:11:40 GMT
+      Server:
+      - Apache/2.4.37 (centos) OpenSSL/1.1.1k PHP/7.2.34
+      Vary:
+      - Authorization
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      X-Powered-By:
+      - PHP/7.2.34
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19998'
+      Content-Length:
+      - '2060'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"header":{"api_version":"3.0.0","type_connection":1,"user":"","request_time":"2022-07-12
+        12:11:40","elapsed_return_time_milliseconds":84.66999999999999,"access_ip":null,"error":null,"amount_sent":1},"report":{"totalEnviado":1,"totalRetornado":1,"razaoSocial":1,"nomeFantasia":1,"dataAbertura":1,"matriz":1,"naturezaJuridica":1,"situacaoCadastral":1,"dataSituacaoCadastral":1,"situacaoEspecial":0,"simples":1,"faixaFaturamento":0,"faixaFuncionario":0,"porte":0,"cnae":1,"inscricaoEstadual":0,"quandroSocietario":1,"email":1,"telefone":1,"endereco":1,"imovel":0},"result":[{"empresa":{"cadastral":{"CNPJ":"33630661000150","razaoSocial":"LATAM
+        TECNOLOGIA LTDA","nomeFantasia":"LATAM GATEWAY","dataAbertura":"2019-05-15","matriz":"MATRIZ","situacaoCadastral":"ATIVA","dataSituacaoCadastral":"2019-05-15","dataAtualizacaoStatusReceitaFederal":"2022-01-01","motivoSituacaoCadastral":"SEM
+        MOTIVO","situacaoEspecial":null,"inscricaoEstadual":[]},"firmografico":{"cnae":[{"cnae_codigo":"7490104","cnae_descricao":"Atividades
+        de intermedia\u00e7\u0103o e agenciamento de servi\u00e7os e neg\u00f3cios
+        em geral, exceto imobili\u00e1rios","cnae_ordem":1}],"codigoNaturezaJuridica":"2062","descricaoNaturezaJuridica":"Sociedade
+        Empres\u00e1ria Limitada","simples":"0","porte":null,"faixaFuncionario":null,"faixaFaturamento":null},"contato":{"endereco":[{"tipoLogradouro":"RUA","logradouro":"SAO
+        MARCELINO CHAMPAGNAT","numero":"1226","complemento":null,"bairro":"ZONA 02","cidade":"MARINGA","uf":"PR","cep":"87010430","ordem":1}],"email":[{"email":"pcmaffissoni@gmail.com","ordem":1}],"telefone":[{"ddd":"44","numero":"988279422","operadora":null,"procon":null,"tipoTelefone":null,"ordem":1}]},"vinculo":{"quandroSocietario":[{"nr_cpf_cnpj":"00933965974","nome":"","dataEntreda":"2019-05-15","qualificacao":"","nm_primeiro":"","nm_meio":"","nm_ultimo":"","nm_parentesco":""},{"nr_cpf_cnpj":"00959339990","nome":"","dataEntreda":"2019-05-15","qualificacao":"","nm_primeiro":"","nm_meio":"","nm_ultimo":"","nm_parentesco":""}],"funcionario":[]},"patrimonio":{"imovel":[]}}}]}'
+  recorded_at: Tue, 12 Jul 2022 15:11:41 GMT
+recorded_with: VCR 6.1.0

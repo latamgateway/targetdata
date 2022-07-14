@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=2&client_secret=123456&username=my_user&password=my_password&empresa=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.targetdata-smart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Tue, 12 Jul 2022 15:10:00 GMT
+      Server:
+      - Apache/2.4.37 (centos) OpenSSL/1.1.1k PHP/7.2.34
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      X-Powered-By:
+      - PHP/7.2.34
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19996'
+      Content-Length:
+      - '33'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "message": "Server Error"
+        }
+  recorded_at: Tue, 12 Jul 2022 15:10:00 GMT
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/PJ/CNPJ
+    body:
+      encoding: UTF-8
+      string: '["73763318000106"]'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - 'Bearer '
+      Connection:
+      - close
+      Host:
+      - api.targetdata-smart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 12 Jul 2022 15:10:00 GMT
+      Server:
+      - Apache/2.4.37 (centos) OpenSSL/1.1.1k PHP/7.2.34
+      Vary:
+      - Authorization
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      X-Powered-By:
+      - PHP/7.2.34
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19995'
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":-1,"message":"Token inv\u00e1lido! Utilize o \"refresh_token\"
+        para gerar um novo token v\u00e1lido."}'
+  recorded_at: Tue, 12 Jul 2022 15:10:00 GMT
+recorded_with: VCR 6.1.0
